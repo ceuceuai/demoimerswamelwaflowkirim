@@ -30,9 +30,8 @@
 
     #mainWrapper { width: 100%; display: flex; flex-direction: column; transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); max-width: 100%; margin-top: 1rem; }
     
-    /* SHARED IMAGE ENGINE (Anti-Kepotong) */
     #productImageWrapper { 
-      max-width: 440px; /* Samain dengan lebar form biar proposional */
+      max-width: 440px; 
       width: 100%; 
       margin: 1.5rem auto; 
       border-radius: 1.8rem; 
@@ -41,12 +40,10 @@
     }
     #productImage { width: 100%; height: auto; display: block; object-fit: contain; }
 
-    /* CENTER LAYOUT */
     .layout-center { align-items: center; text-align: center; }
     .layout-center #contentSide { margin-bottom: 2rem; width: 100%; max-width: 650px; }
     .layout-center .glass { max-width: 440px; width: 100%; margin: 0 auto; }
 
-    /* SPLIT LAYOUT - BALANCED ENGINE */
     @media (min-width: 768px) {
       .layout-split { flex-direction: row !important; justify-content: center !important; align-items: center !important; gap: 60px !important; max-width: 1100px !important; margin: 4rem auto !important; text-align: left !important; }
       .layout-split #contentSide { width: 440px !important; text-align: center !important; display: flex !important; flex-direction: column !important; align-items: center !important; flex-shrink: 0 !important; }
@@ -182,6 +179,7 @@
 
         styleTag.innerHTML = `
           #dynamicAppName { font-size: ${fSize}px !important; font-family: ${fFam} !important; ${cStyle} text-align: center !important; }
+          #dynamicTagline, #dynamicFormHeading { font-family: ${fFam} !important; ${cStyle} }
           .btn-cta { ${bStyle} }
           @media (max-width: 640px) { #dynamicAppName { font-size: ${Math.max(24, fSize * 0.7)}px !important; } }
         `;

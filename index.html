@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <!-- iMersWAMEL v8.6.0 - Maestro Frontend (Thick & Heavy Edition) -->
+  <!-- iMersWAMEL v8.7.0 - Maestro Frontend (Thick & Heavy Edition) -->
   <!-- Developer: Terry Katar | imersnesia.com -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Courier+Prime&family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   
-  <!-- DYNAMIC TYPOGRAPHY ENGINE (INJECTED BY JS) -->
+  <!-- DYNAMIC TYPOGRAPHY ENGINE (Jantung Dinamis) -->
   <style id="dynamic-typography">
     #dynamicAppName { font-size: 38px; font-family: 'Poppins', sans-serif; color: #ffffff; text-transform: none !important; text-align: center !important; }
   </style>
@@ -19,9 +19,9 @@
     body { font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif; min-height: 100vh; min-height: -webkit-fill-available; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 50px 16px; opacity: 0; transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.6s ease; overflow-x: hidden; overflow-y: auto; text-transform: none !important; }
     html { height: -webkit-fill-available; }
     
-    /* THEME ENGINE */
+    /* THEME ENGINE - PREMIUM DEPTH */
     .theme-midnight { background-color: #0f172a; color: white; }
-    .theme-midnight .glass { background: #1e293b; border: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.5); }
+    .theme-midnight .glass { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.5); backdrop-filter: blur(20px); }
     .theme-midnight .input-control { background: #0f172a; color: white; border: 1px solid rgba(255, 255, 255, 0.1); }
 
     .theme-clean { background-color: #f8fafc; color: #0f172a; }
@@ -32,73 +32,51 @@
     .theme-nature .glass { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(30px); }
 
     #mainWrapper { width: 100%; display: flex; flex-direction: column; transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); max-width: 100%; margin-top: 1rem; }
-    
-    /* SHARED IMAGE ENGINE (Anti-Kepotong) */
-    #productImageWrapper { 
-      max-width: 440px; 
-      width: 100%; 
-      margin: 1.5rem auto; 
-      border-radius: 1.8rem; 
-      overflow: hidden; 
-      box-shadow: 0 25px 60px rgba(0,0,0,0.4); 
-    }
+    #productImageWrapper { max-width: 440px; width: 100%; margin: 1.5rem auto; border-radius: 1.8rem; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.4); }
     #productImage { width: 100%; height: auto; display: block; object-fit: contain; }
 
-    /* CENTER LAYOUT */
     .layout-center { align-items: center; text-align: center; }
-    .layout-center #contentSide { margin-bottom: 2rem; width: 100%; max-width: 650px; }
+    .layout-center #contentSide { margin-bottom: 2.5rem; width: 100%; max-width: 650px; }
     .layout-center .glass { max-width: 440px; width: 100%; margin: 0 auto; }
 
-    /* SPLIT LAYOUT - BALANCED ENGINE */
     @media (min-width: 768px) {
       .layout-split { flex-direction: row !important; justify-content: center !important; align-items: center !important; gap: 60px !important; max-width: 1100px !important; margin: 4rem auto !important; text-align: left !important; }
       .layout-split #contentSide { width: 440px !important; text-align: center !important; display: flex !important; flex-direction: column !important; align-items: center !important; flex-shrink: 0 !important; }
       .layout-split #formSide { width: 440px !important; flex-shrink: 0 !important; }
-      .layout-split #productImageWrapper { margin-top: 2rem !important; }
     }
 
-    @media (max-width: 767px) {
-      #productImageWrapper { margin: 2rem auto !important; }
-      .glass { padding: 2.25rem 1.5rem !important; }
-    }
-
-    .glass { border-radius: 1.8rem; padding: 2.25rem; position: relative; z-index: 10; }
-    .input-control { width: 100%; padding: 0.9rem 1.2rem; border-radius: 0.8rem; margin-top: 0.4rem; outline: none; transition: 0.3s; font-size: 15px; font-weight: 500; }
+    .glass { border-radius: 2rem; padding: 2.5rem; position: relative; z-index: 10; }
+    .input-control { width: 100%; padding: 1rem 1.25rem; border-radius: 0.9rem; margin-top: 0.4rem; outline: none; transition: 0.3s; font-size: 15px; font-weight: 500; }
     .input-control:focus { border-color: #6366f1; box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15); }
 
-    .btn-cta { 
-      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      cursor: pointer; font-weight: 800; color: white; letter-spacing: 0.02em; text-transform: none !important;
-      padding-top: 1.4rem !important; padding-bottom: 1.4rem !important;
-      display: block; width: 100%; text-align: center; border-radius: 1rem; border: none;
-    }
-    .btn-cta:hover { transform: translateY(-3px); filter: brightness(1.1); }
+    .btn-cta { transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; font-weight: 800; color: white; letter-spacing: 0.05em; padding-top: 1.4rem !important; padding-bottom: 1.4rem !important; display: block; width: 100%; text-align: center; border-radius: 1.1rem; border: none; text-transform: uppercase; }
+    .btn-cta:hover { transform: translateY(-4px); filter: brightness(1.1); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
 
-    #protectedFooter { margin-top: 5rem; padding-bottom: 4rem; text-align: center; width: 100%; z-index: 5; }
-    .brand-copyright { opacity: 0.4; font-weight: 600; letter-spacing: 0.05em; font-size: 11px; color: #94a3b8; }
+    #protectedFooter { margin-top: 6rem; padding-bottom: 4rem; text-align: center; width: 100%; z-index: 5; }
+    .brand-copyright { opacity: 0.3; font-weight: 600; letter-spacing: 0.1em; font-size: 10px; color: #94a3b8; text-transform: uppercase; }
     
-    #loader-overlay { position: fixed; inset: 0; background: #0f172a; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 9999; transition: opacity 0.7s ease; }
+    #loader-overlay { position: fixed; inset: 0; background: #0f172a; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 9999; transition: opacity 0.8s ease; }
     @keyframes fadeInSlide { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .animate-in { animation: fadeInSlide 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .animate-in { animation: fadeInSlide 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
   </style>
 </head>
 <body class="theme-midnight">
 
   <div id="loader-overlay">
     <div class="flex flex-col items-center gap-6">
-      <div class="w-10 h-10 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
-      <p id="loader-text" class="text-[11px] font-black text-indigo-400 uppercase tracking-[0.4em] animate-pulse">Menghubungkan Database...</p>
+      <div class="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+      <p class="text-[11px] font-black text-indigo-400 uppercase tracking-[0.4em] animate-pulse">Maestro Handshaking...</p>
     </div>
   </div>
 
   <div id="mainWrapper" class="layout-center animate-in">
     <div id="contentSide" class="z-20 px-4 md:px-0">
-      <div id="logoWrapper" class="hidden mb-6 md:mb-10">
-        <img id="dynamicLogo" src="" alt="" class="h-12 md:h-16 w-auto mx-auto object-contain">
+      <div id="logoWrapper" class="hidden mb-8 md:mb-12">
+        <img id="dynamicLogo" src="" alt="" class="h-14 md:h-20 w-auto mx-auto object-contain">
       </div>
       
-      <h1 id="dynamicAppName" class="font-black tracking-tighter mb-3 leading-tight"></h1>
-      <p id="dynamicTagline" class="text-[15px] md:text-lg font-medium opacity-80 leading-relaxed mx-auto max-w-md md:max-w-xl mb-4 px-2"></p>
+      <h1 id="dynamicAppName" class="font-black tracking-tighter mb-4 leading-tight"></h1>
+      <p id="dynamicTagline" class="text-[16px] md:text-xl font-medium opacity-80 leading-relaxed mx-auto max-w-md md:max-w-2xl mb-6 px-4"></p>
       
       <div id="productImageWrapper" class="hidden transform transition-all duration-1000 scale-95 opacity-0">
         <img id="productImage" src="" alt="">
@@ -108,37 +86,37 @@
     <div id="formSide" class="w-full flex justify-center z-20 mt-8 md:mt-0 px-4">
       <main class="glass w-full shadow-2xl">
         <div id="formWrapper">
-          <div class="text-center mb-8 md:mb-10">
-            <h2 id="dynamicFormHeading" class="text-[18px] md:text-xl font-bold tracking-wider uppercase"></h2>
-            <div class="w-10 h-1 bg-indigo-500 mx-auto mt-4 rounded-full opacity-60"></div>
+          <div class="text-center mb-10">
+            <h2 id="dynamicFormHeading" class="text-[19px] md:text-2xl font-black tracking-widest uppercase"></h2>
+            <div id="formIndicator" class="w-12 h-1 bg-indigo-500 mx-auto mt-5 rounded-full opacity-60"></div>
           </div>
-          <form id="leadForm" onsubmit="handleSubmit(event)" class="space-y-4 md:space-y-5 text-left">
+          <form id="leadForm" onsubmit="handleSubmit(event)" class="space-y-5 md:space-y-6 text-left">
             <input type="hidden" id="campaignInput" name="campaign" value="GENERAL">
             <div>
-              <label class="text-[10px] font-bold opacity-60 ml-1 tracking-wide">Nama Lengkap Pendaftar</label>
-              <input type="text" name="nama" id="nama" required placeholder="Tulis nama lengkap Anda" class="input-control">
+              <label class="text-[11px] font-black text-indigo-400 uppercase tracking-widest ml-1">Nama Lengkap</label>
+              <input type="text" name="nama" id="nama" required placeholder="Siapa nama Anda?" class="input-control font-bold">
             </div>
             <div>
-              <label class="text-[10px] font-bold opacity-60 ml-1 tracking-wide">Alamat Email Aktif</label>
-              <input type="email" name="email" id="email" required placeholder="nama@email.com" class="input-control">
+              <label class="text-[11px] font-black text-indigo-400 uppercase tracking-widest ml-1">Email Aktif</label>
+              <input type="email" name="email" id="email" required placeholder="nama@perusahaan.com" class="input-control font-bold">
             </div>
             <div>
-              <label class="text-[10px] font-bold opacity-60 ml-1 tracking-wide">Nomor WhatsApp Aktif</label>
-              <input type="tel" name="wa" id="wa" required placeholder="62 xxxxxxxxx" class="input-control">
+              <label class="text-[11px] font-black text-indigo-400 uppercase tracking-widest ml-1">Nomor WhatsApp</label>
+              <input type="tel" name="wa" id="wa" required placeholder="628xxxxxxxxxx" class="input-control font-bold">
             </div>
-            <button type="submit" id="submitBtn" class="btn-cta text-[17px] md:text-[19px] mt-6 active:scale-95"></button>
-            <div class="flex items-center justify-center gap-3 mt-8 opacity-25">
-              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-indigo-500"></i>
-              <p class="text-[9px] font-bold tracking-widest uppercase">Secure Leads Data Protection Active</p>
+            <button type="submit" id="submitBtn" class="btn-cta text-[18px] md:text-[20px] mt-8 active:scale-95 shadow-xl"></button>
+            <div class="flex items-center justify-center gap-3 mt-10 opacity-30">
+              <i data-lucide="shield-check" class="w-4 h-4 text-indigo-400"></i>
+              <p class="text-[10px] font-black tracking-[0.2em] uppercase">AES-256 Leads Encrypted</p>
             </div>
           </form>
         </div>
-        <div id="successState" class="hidden text-center py-12 md:py-16 animate-in px-4">
-          <div class="w-20 h-20 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-emerald-500/20 shadow-2xl">
-            <i data-lucide="check-circle" class="w-10 h-10 text-emerald-400"></i>
+        <div id="successState" class="hidden text-center py-16 md:py-20 animate-in px-6">
+          <div class="w-24 h-24 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-10 border border-emerald-500/20 shadow-2xl">
+            <i data-lucide="check-circle" class="w-12 h-12 text-emerald-400"></i>
           </div>
-          <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tighter text-emerald-500">Data Terkirim!</h2>
-          <p class="opacity-80 text-sm md:text-[17px] leading-relaxed mb-10 font-medium">Data pendaftaran Anda telah diamankan. Harap tunggu pesan instruksi selanjutnya melalui WhatsApp.</p>
+          <h2 class="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter text-emerald-500">BERHASIL!</h2>
+          <p id="successMsg" class="opacity-80 text-[17px] md:text-[20px] leading-relaxed mb-10 font-bold"></p>
         </div>
       </main>
     </div>
@@ -151,81 +129,100 @@
   </footer>
 
   <script>
-    // URL WEB APP GAS - PASTIKAN SUDAH TERDEPLOY DENGAN BENAR
+    /**
+     * PENTING: Ganti URL di bawah dengan Link Web App lu yang paling BARU.
+     * Pastikan lu pilih "Anyone" pas deploy.
+     */
     const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyrlNIIwfixBrWQdqMGwBt8E56j_y19h1KsASA2q1uvFxA7lFaWEP-4PnGAIAiKTXIL/exec"; 
     
-    const campaignId = new URLSearchParams(window.location.search).get('campaign') || "GENERAL";
-    let currentSettings = {};
+    // MAESTRO PATH DETECTION: Mendukung link /kampen (Clean URL Vercel)
+    function detectCampaignId() {
+      const urlParams = new URLSearchParams(window.location.search);
+      let id = urlParams.get('campaign');
+      if (!id) {
+        const pathSegments = window.location.pathname.split('/').filter(s => s && s !== "index.html");
+        id = pathSegments.length > 0 ? pathSegments[pathSegments.length - 1] : "GENERAL";
+      }
+      return id || "GENERAL";
+    }
 
-    async function initializeApplication() {
+    const currentCampaign = detectCampaignId();
+    let siteSettings = {};
+
+    async function initializeMaestro() {
+      console.log("iMersWamel: Memulai Sinkronisasi untuk Campaign:", currentCampaign);
       try {
-        const response = await fetch(`${WEB_APP_URL}?action=getSettings&campaign=${campaignId}&_t=${Date.now()}`);
+        const response = await fetch(`${WEB_APP_URL}?action=getSettings&campaign=${currentCampaign}&_t=${Date.now()}`);
         const data = await response.json();
-        currentSettings = data;
+        siteSettings = data;
+        
+        console.log("iMersWamel: Data Berhasil Ditarik:", data);
 
-        // THEME SYNC
+        // 1. TEMA VISUAL
         document.body.className = `theme-${data.theme || 'midnight'}`;
         
-        // TYPOGRAPHY SYNC
+        // 2. TYPOGRAPHY ENGINE (FIXED: Nular ke semua branding)
         const styleTag = document.getElementById('dynamic-typography');
         let fRaw = data.titleFontFamily || data.globalFontFamily || 'Poppins';
         let fSize = parseInt(data.titleFontSize || data.globalFontSize || '38');
         let fFam = fRaw === 'serif' ? 'Lora, serif' : (fRaw === 'monospace' ? 'Courier Prime, monospace' : 'Poppins, sans-serif');
         
-        // COLOR SYNC (SOLID/GRADIENT)
-        let cStyle = "", bStyle = "";
-        const colorType = data.titleColorType || data.globalColorType || 'solid';
+        let colorCSS = "", btnCSS = "", indicatorCSS = "";
+        const cType = data.titleColorType || data.globalColorType || 'solid';
         
-        if (colorType === 'gradient') {
+        if (cType === 'gradient') {
           let gS = data.titleGradientStart || data.globalGradientStart || '#6366f1';
           let gE = data.titleGradientEnd || data.globalGradientEnd || '#a855f7';
-          cStyle = `background: linear-gradient(to right, ${gS}, ${gE}) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; color: transparent !important;`;
-          bStyle = `background: linear-gradient(135deg, ${gS} 0%, ${gE} 100%) !important; box-shadow: 0 10px 25px -5px ${gS}66 !important;`;
+          colorCSS = `background: linear-gradient(to right, ${gS}, ${gE}) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; color: transparent !important;`;
+          btnCSS = `background: linear-gradient(135deg, ${gS} 0%, ${gE} 100%) !important; box-shadow: 0 10px 30px -5px ${gS}88 !important;`;
+          indicatorCSS = `background: ${gS} !important;`;
         } else {
           let sC = data.titleColorSolid || data.globalColorSolid || '#ffffff';
-          cStyle = `color: ${sC} !important; background: none !important; -webkit-text-fill-color: initial !important;`;
-          bStyle = `background-color: ${sC} !important; box-shadow: 0 10px 25px -5px ${sC}66 !important;`;
+          colorCSS = `color: ${sC} !important; background: none !important; -webkit-text-fill-color: initial !important;`;
+          btnCSS = `background-color: ${sC} !important; box-shadow: 0 10px 30px -5px ${sC}88 !important;`;
+          indicatorCSS = `background-color: ${sC} !important;`;
         }
 
-        // MAESTRO STYLE INJECTION (ALL BRANDING ELEMENTS)
         styleTag.innerHTML = `
-          #dynamicAppName { font-size: ${fSize}px !important; font-family: ${fFam} !important; ${cStyle} text-align: center !important; }
-          #dynamicTagline, #dynamicFormHeading { font-family: ${fFam} !important; ${cStyle} }
-          .btn-cta { ${bStyle} }
-          @media (max-width: 640px) { #dynamicAppName { font-size: ${Math.max(24, fSize * 0.7)}px !important; } }
+          #dynamicAppName { font-size: ${fSize}px !important; font-family: ${fFam} !important; ${colorCSS} text-align: center !important; }
+          #dynamicTagline, #dynamicFormHeading { font-family: ${fFam} !important; ${colorCSS} }
+          #formIndicator { ${indicatorCSS} }
+          .btn-cta { ${btnCSS} }
+          @media (max-width: 640px) { #dynamicAppName { font-size: ${Math.max(26, fSize * 0.75)}px !important; } }
         `;
 
-        // LAYOUT SYNC
-        const mainWrapper = document.getElementById('mainWrapper');
-        mainWrapper.className = (data.layout === 'split') ? "layout-split animate-in" : "layout-center animate-in";
+        // 3. LAYOUT & PRODUCT IMAGE SYNC
+        const wrapper = document.getElementById('mainWrapper');
+        wrapper.className = (data.layout === 'split') ? "layout-split animate-in" : "layout-center animate-in";
         
-        // PRODUCT IMAGE SYNC
-        const imgUrl = data.productImageUrl || data.masterProductImageUrl;
-        const showImg = String(data.showProductImg).toLowerCase() === "true" || (data.showProductImg === undefined && String(data.masterShowProductImg).toLowerCase() === "true");
+        const campImg = data.productImageUrl;
+        const masterImg = data.masterProductImageUrl;
+        const finalImg = (campImg && campImg.trim() !== "") ? campImg : masterImg;
+        
+        const showCamp = String(data.showProductImg).toLowerCase() === "true";
+        const showMaster = String(data.masterShowProductImg).toLowerCase() === "true";
+        const isShow = (data.showProductImg !== undefined) ? showCamp : showMaster;
 
-        if (showImg && imgUrl) {
-          const pImg = document.getElementById('productImage');
+        if (isShow && finalImg) {
+          document.getElementById('productImage').src = finalImg;
           const pWrap = document.getElementById('productImageWrapper');
-          pImg.src = imgUrl;
           pWrap.classList.remove('hidden');
-          setTimeout(() => { pWrap.classList.add('scale-100', 'opacity-100'); }, 250);
+          setTimeout(() => { pWrap.classList.add('scale-100', 'opacity-100'); }, 300);
         }
 
-        // CONTENT SYNC
+        // 4. CONTENT MAPPING
         document.title = data.appName || "iMersWamel";
-        document.getElementById('dynamicAppName').innerText = data.appName || "iMersWamel";
-        document.getElementById('dynamicTagline').innerText = data.tagline || "";
+        document.getElementById('dynamicAppName').innerText = data.appName || "iMersWamel Pro";
+        document.getElementById('dynamicTagline').innerText = data.tagline || "Build Simple. Look Serious";
         document.getElementById('dynamicFormHeading').innerText = data.formHeading || "Daftar Sekarang";
         document.getElementById('submitBtn').innerText = data.btnText || "Dapatkan Akses";
-        document.getElementById('campaignInput').value = campaignId;
+        document.getElementById('successMsg').innerText = "Data pendaftaran Anda sudah kami amankan. Harap tunggu pesan instruksi melalui WhatsApp.";
+        document.getElementById('campaignInput').value = currentCampaign;
         
-        // FOOTER SYNC
-        if (data.appName) {
-          document.getElementById('footerBrandName').innerText = data.appName;
-          document.getElementById('footerBrandLink').href = data.websiteUrl || "#";
-        }
+        // FOOTER & LOGO
+        if (data.appName) document.getElementById('footerBrandName').innerText = data.appName;
+        document.getElementById('footerBrandLink').href = data.websiteUrl || "#";
 
-        // LOGO SYNC
         if (data.logoUrl) {
           const lImg = document.getElementById('dynamicLogo');
           lImg.src = data.logoUrl;
@@ -233,16 +230,23 @@
         }
 
         // REMOVE LOADER
-        document.getElementById('loader-overlay').style.opacity = '0';
-        setTimeout(() => { document.getElementById('loader-overlay').remove(); document.body.style.opacity = '1'; lucide.createIcons(); }, 600);
+        const loader = document.getElementById('loader-overlay');
+        loader.style.opacity = '0';
+        setTimeout(() => { loader.remove(); document.body.style.opacity = '1'; lucide.createIcons(); }, 700);
 
-      } catch (err) { console.error("Maestro Sync Fail:", err); }
+      } catch (err) { 
+        console.error("iMersWamel CRITICAL ERROR:", err);
+        document.getElementById('loader-overlay').remove();
+        document.body.style.opacity = '1';
+      }
     }
 
     async function handleSubmit(event) {
       event.preventDefault();
       const btn = document.getElementById('submitBtn');
-      btn.innerText = "⏳ MENGIRIM DATA..."; btn.disabled = true;
+      const originalText = btn.innerText;
+      btn.innerText = "⏳ SEDANG MENGIRIM..."; btn.disabled = true;
+      
       const payload = Object.fromEntries(new FormData(event.target).entries());
       try {
         await fetch(WEB_APP_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(payload) });
@@ -251,16 +255,20 @@
           document.getElementById('formWrapper').classList.add('hidden');
           document.getElementById('successState').classList.remove('hidden');
           lucide.createIcons();
-        }, 400);
+        }, 450);
         
-        // DYNAMIC REDIRECT
-        if (currentSettings.redirectUrl) {
-          setTimeout(() => { window.location.href = currentSettings.redirectUrl; }, 4000);
+        // DYNAMIC REDIRECT (Mapping redirectUrl vs redirect)
+        const targetUrl = siteSettings.redirectUrl || siteSettings.redirect;
+        if (targetUrl) {
+          setTimeout(() => { window.location.href = targetUrl; }, 4000);
         }
-      } catch (e) { btn.disabled = false; btn.innerText = "COBA LAGI"; }
+      } catch (e) { 
+        btn.disabled = false; btn.innerText = "COBA LAGI"; 
+        console.error("Submit Fail:", e);
+      }
     }
 
-    document.addEventListener('DOMContentLoaded', initializeApplication);
+    document.addEventListener('DOMContentLoaded', initializeMaestro);
   </script>
 </body>
 </html>
